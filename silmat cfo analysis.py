@@ -49,7 +49,7 @@ FROM sales
 GROUP BY county
 """
 df_status = pd.read_sql_query(q1, conn)
-# Business Interpretation: Mombasa exhibits a high fulfillment risk with 33% cancelled orders, whereas Nairobi maintains a flawless 100% completion rate.
+# Business Interpretation: Mombasa exhibits a high fulfillment risk with 33% cancelled orders, whereas Nairobi maintains a 100% completion rate.
 print("--- (1) Order Status Percentage by County ---")
 print(df_status.to_string(index=False), "\n")
 
