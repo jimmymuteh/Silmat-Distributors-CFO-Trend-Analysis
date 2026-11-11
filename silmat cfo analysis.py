@@ -94,10 +94,6 @@ df_running = pd.read_sql_query(q3, conn)
 print("--- (3) Running Total Revenue by Date ---")
 print(df_running.to_string(index=False), "\n")
 
-
-# ==========================================
-# MATPLOTLIB VISUALIZATION (Running Total Trend)
-# ==========================================
 fig, ax = plt.subplots(figsize=(10, 5))
 ax.plot(df_running["date"], df_running["running_total_revenue"], marker='o', color="#1F4E79", linewidth=2.5)
 ax.set_title("Silmat Distributors - Revenue Running Total Trend (KES)")
