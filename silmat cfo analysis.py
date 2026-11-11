@@ -2,10 +2,8 @@ import sqlite3
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Connect to the Silmat Distributors database
 conn = sqlite3.connect("silmat_distributors.db")
 
-# Create table and insert expanded sample data covering multiple dates, statuses, and customers
 conn.executescript("""
 CREATE TABLE IF NOT EXISTS sales (
     order_id INTEGER PRIMARY KEY,
@@ -74,7 +72,6 @@ df_growth = pd.read_sql_query(q2, conn)
 # Business Interpretation: Kamau Stores is our standout growth account, demonstrating consistent sequential order value expansion across three consecutive transactions.
 print("--- (2) Consecutive Order Value Growth Customers ---")
 print(df_growth.to_string(index=False), "\n")
-
 
 # (3) Running total of revenue by date across all counties
 q3 = """
