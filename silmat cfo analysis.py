@@ -37,9 +37,7 @@ INSERT INTO sales VALUES
 conn.commit()
 print("Silmat Distributors Database Ready.\n")
 
-# ==========================================
-# CFO BOARD MEETING QUESTIONS (SQL + Pandas)
-# ==========================================
+# CFO BOARD MEETING QUESTIONS
 
 # (1) Percentage of orders completed vs pending vs cancelled per county
 q1 = """
